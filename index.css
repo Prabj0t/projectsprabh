@@ -1,0 +1,107 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box; /*content ka size shota ho jata hai if border vgera add krte hain to */
+    
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+#wrapper{
+    height: 100vh;
+    /* width: 100vw; */
+    overflow-y: auto;
+    overflow-x: hidden;
+    perspective: 10px; /* take any value bacuase it need just to on the perspective*/
+}
+
+.container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative; /*because we need images to be absolute so parent should be non static*/
+    height: 100%;
+    transform-style: preserve-3d; /*to visible all changes in 3D prespective it is needed*/
+    z-index: -1;
+}
+
+.back{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    /* to maintain aspect ratio */
+    object-fit: cover; 
+    transform:  translateZ(-40px) scale(6);
+}
+.front{
+    position: absolute;
+    height: 100%; 
+    width: 100%; 
+    object-fit: cover; 
+    transform:  translateZ(-20px) scale(3) ;
+    z-index: -1;
+    
+} 
+.heading{
+    position:relative;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 10rem;
+    color: white;
+    text-shadow: 9px 6px 20px rgba(0, 0, 0, 0.316);
+    text-decoration-color:  rgb(50, 189, 189);
+}
+
+section{
+    position:relative;
+    background-color: rgb(28, 28, 28);
+    color: white;
+    padding: 5rem 0;
+}
+
+.text{
+    text-align: justify;
+    font-size: 1.2rem;
+    padding: 3rem 10rem;
+    margin: 4rem 0;
+}
+
+.sechead{
+    padding: 0 10rem;
+    font-size: 4rem;
+}
+
+.bg{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 400px;
+    width: 100%;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+}
+
+.desc{
+    position: absolute;
+    font-size: 2rem;
+    color: rgb(31, 31, 31);
+    /* box-sizing: border-box; */
+    background-color: rgba(240, 248, 255, 0.452);
+    padding: .9rem;
+    border-radius: 100px;
+}
+
+.bg1{
+    background-image: url("sport-1.jpg");
+
+}
+.bg2{
+    background-image: url("sport-2.jpg");
+}
+.bg3{
+    background-image: url("sport-3.jpg");
+}
+
+
+
+
